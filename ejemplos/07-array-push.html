@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-if</title>
+</head>
+<body>
+    <ul id="app">
+        <li v-for="persona in personas">
+            {{ persona.nombre }} ({{ persona.edad }})
+        </li>
+
+        <button @click="agregarPersona">Agregar persona</button>
+    </ul>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            personas: [
+                { nombre: 'pepe', edad: 30 },
+                { nombre: 'beto', edad: 25 },
+                { nombre: 'max',  edad: 20 },
+            ]
+        },
+        methods: {
+            agregarPersona: function() {
+                this.personas.push({ nombre: 'jorge', edad: 28 })
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-if / v-else</title>
+</head>
+<body>
+    <div id="app">
+        <button @click="sumarUno">+1</button>
+        <h1 v-if="numero === 1"> Uno </h1>
+        <h1 v-else-if="numero === 2"> Dos </h1>
+        <h1 v-else-if="numero === 3"> Tres </h1>
+        <h1 v-else> No 1, 2 o 3 :( </h1>
+    </div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            numero: 1
+        },
+        methods: {
+            sumarUno: function() {
+                this.numero++;
+            }
+        }
+    })
+</script>
+</body>
+</html>

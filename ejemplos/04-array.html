@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-if</title>
+</head>
+<body>
+    <ul id="app">
+        <li v-for="nombre in nombres">
+            {{ nombre }}
+        </li>
+    </ul>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            nombres: [ 'pepe', 'beto', 'max' ]
+        }
+    })
+</script>
+</body>
+</html>

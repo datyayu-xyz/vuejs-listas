@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-if</title>
+</head>
+<body>
+    <div id="app">
+        <button @click="cambiarEstado">Mostrar/Ocultar</button>
+        <h1 v-if="mostrar"> Hola </h1>
+    </div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            mostrar: true
+        },
+        methods: {
+            cambiarEstado: function() {
+                this.mostrar = !this.mostrar;
+            }
+        }
+    })
+</script>
+</body>
+</html>
